@@ -5,10 +5,12 @@
 }
 
 header {
-    height: 100px;
+    position: relative;
+    height: 120px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 1;
 }
 
 nav {
@@ -21,14 +23,79 @@ nav {
 #link_list {
     list-style: none;
     display: flex;
-    width: 900px;
+    width: 1200px;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .menu_link {
     text-decoration: none;
-    color: green;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+#bakgrundsbild {
+    filter: blur(3px);
+    position: absolute;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#wrapper {
+    padding: 10px;
+    display: grid;
+    width: 100vw;
+    height: 80vh;
+    grid-template-columns: 200px 1fr 30px 1fr 200px;
+    grid-template-rows: 60px 1fr 1fr 1fr;
+    grid-template-areas: 
+        "a he he he b"
+        "c m1 3e 3e d"
+        "e 1e 1e m2 f"
+        "g m3 2e 2e h"
+    ;
+    gap: 10px;
+}
+
+#menu_header {
+    grid-area: he;
+    font-size: 3rem;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#menu_item1 {
+    grid-area: m1;
+    background-color: lightgray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+#menu_item2 {
+    grid-area: m2;
+    background-color: lightgray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+
+}
+
+#menu_item3 {
+    grid-area: m3;
+    background-color: lightgray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+
+}
+
+/* menu header */
+/* empty space */
