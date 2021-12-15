@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(156, 156, 140);
+}
+
 header {
     position: relative;
     height: 120px;
@@ -36,7 +40,7 @@ nav {
 }
 
 #bakgrundsbild {
-    filter: blur(3px);
+    filter: blur(5px);
     position: absolute;
     z-index: 0;
     height: 100vh;
@@ -48,21 +52,22 @@ nav {
     display: grid;
     width: 100vw;
     height: 80vh;
-    grid-template-columns: 200px 1fr 30px 1fr 200px;
-    grid-template-rows: 60px 1fr 1fr 1fr;
+    position: relative;
+    grid-template-columns: 280px 1fr 60px 1fr 280px;
+    grid-template-rows: 80px 1fr 1fr 1fr;
     grid-template-areas: 
-        "a he he he b"
-        "c m1 3e 3e d"
-        "e 1e 1e m2 f"
-        "g m3 2e 2e h"
+        ".  he he he . "
+        ".  m1 .  .  . "
+        ".  .  .  m2 . "
+        ".  m3 .  .  . "
     ;
-    gap: 10px;
+    gap: 8px;
 }
 
 #menu_header {
     grid-area: he;
     font-size: 3rem;
-    color: gray;
+    color: rgb(58, 56, 56);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -70,32 +75,108 @@ nav {
 
 #menu_item1 {
     grid-area: m1;
-    background-color: lightgray;
+    background-color: rgba(58, 58, 58, 0.582);
     border-radius: 20px;
     display: flex;
     justify-content: space-evenly;
     padding: 30px;
+    border: 2px solid blanchedalmond;
+    color: white;
 }
 
 #menu_item2 {
     grid-area: m2;
-    background-color: lightgray;
+    background-color: rgba(58, 58, 58, 0.582);
     border-radius: 20px;
     display: flex;
     justify-content: space-evenly;
     padding: 30px;
-
+    border: 2px solid blanchedalmond;
+    color: white;
 }
 
 #menu_item3 {
     grid-area: m3;
-    background-color: lightgray;
+    background-color: rgba(58, 58, 58, 0.582);
     border-radius: 20px;
     display: flex;
     justify-content: space-evenly;
     padding: 30px;
-
+    border: 2px solid blanchedalmond;
+    color: white;
 }
 
-/* menu header */
-/* empty space */
+#logga {
+    position: relative;
+    z-index: 2;
+    width: 1000px;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contacts {
+    grid-area: co;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border: 3px solid blanchedalmond;
+    display: flex;
+    font-size: 2rem;
+    color: rgb(160, 159, 159);
+    justify-content: space-evenly;
+}
+
+#story {
+    grid-area: so;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border: 3px solid blanchedalmond;
+    display: flex;
+    font-size: 3rem;
+    color: rgb(160, 159, 159);
+    justify-content: space-evenly;
+}
+
+#address {
+    grid-area: ad;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border: 3px solid blanchedalmond;
+    display: flex;
+    font-size: 2rem;
+    color: rgb(160, 159, 159);
+    justify-content: space-evenly;
+}
+
+#about_us_wrapper {
+    width: 100vw;
+    height: 87vh;
+    display: grid;
+    padding: 0px;
+    position: relative;
+    grid-template-columns: 70px 1fr 100px 3fr 100px 70px;
+    grid-template-rows: 3fr 1fr 30px;
+    grid-template-areas: 
+        ".  co so so so . "
+        ".  co .  ad .  . "
+        ".  .  .  .  .  . "
+    ;
+    gap: 50px;
+}
+
+#ab_us_bild {
+    position: absolute;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    filter: blur(3px);
+}
+
+#menu_bild {
+    position: absolute;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    filter: blur(5px);
+}
