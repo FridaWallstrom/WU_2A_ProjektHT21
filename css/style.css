@@ -27,27 +27,52 @@ nav {
 #link_list {
     list-style: none;
     display: flex;
-    width: 1200px;
+    width: 1400px;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .menu_link {
     text-decoration: none;
-    color: black;
-    font-size: 2rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(31, 30, 30);
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
-#bakgrundsbild {
-    filter: blur(5px);
+.white_text {
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.menu_link:hover {
+    font-weight: bolder;
+}
+
+#background {
+    filter: blur(4px);
     position: absolute;
     z-index: 0;
     height: 100vh;
     width: 100vw;
 }
 
-#wrapper {
+#logo_container {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100vw;
+}
+
+#logo {
+    width: 1300px;
+    height: auto;
+}
+
+#menu_wrapper {
     padding: 10px;
     display: grid;
     width: 100vw;
@@ -66,8 +91,8 @@ nav {
 
 #menu_header {
     grid-area: he;
-    font-size: 3rem;
-    color: rgb(58, 56, 56);
+    font-size: 4rem;
+    color: rgb(63, 63, 63);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -106,45 +131,87 @@ nav {
     color: white;
 }
 
-#logga {
-    position: relative;
-    z-index: 2;
-    width: 1000px;
-    height: auto;
+#contacts_title {
+    font-size: 2rem;
+    color: white;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    margin-top: 15px;
 }
 
-#contacts {
+#story_title {
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#address_title {
+    font-size: 2.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#contact_text {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+}
+
+.story_text {
+    flex-direction: column;
+    padding: 50px;
+    font-size: 1.1rem;
+}
+
+#address_text {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding: 20px;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+#contacts_container {
     grid-area: co;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     border: 3px solid blanchedalmond;
-    display: flex;
-    font-size: 2rem;
+    display: grid;
+    font-size: 1rem;
     color: rgb(160, 159, 159);
     justify-content: space-evenly;
 }
 
-#story {
+#story_text_container {
+    display: flex;
+    flex-direction: row;
+}
+
+#story_container {
     grid-area: so;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.719);
     border-radius: 20px;
     border: 3px solid blanchedalmond;
     display: flex;
-    font-size: 3rem;
+    flex-direction: column;
+    font-size: 1.25rem;
     color: rgb(160, 159, 159);
-    justify-content: space-evenly;
 }
 
-#address {
+#address_container {
     grid-area: ad;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     border: 3px solid blanchedalmond;
-    display: flex;
-    font-size: 2rem;
+    display: grid;
+    font-size: 1rem;
     color: rgb(160, 159, 159);
     justify-content: space-evenly;
 }
@@ -155,28 +222,31 @@ nav {
     display: grid;
     padding: 0px;
     position: relative;
-    grid-template-columns: 70px 1fr 100px 3fr 100px 70px;
+    grid-template-columns: 70px 1fr 50px 100px 3fr 100px 70px;
     grid-template-rows: 3fr 1fr 30px;
     grid-template-areas: 
-        ".  co so so so . "
-        ".  co .  ad .  . "
-        ".  .  .  .  .  . "
+        ".  co .  so so so . "
+        ".  co .  .  ad .  . "
+        ".  .  .  .  .  .  . "
     ;
     gap: 50px;
 }
 
-#ab_us_bild {
-    position: absolute;
-    z-index: 0;
-    height: 100vh;
-    width: 100vw;
-    filter: blur(3px);
-}
-
-#menu_bild {
+#about_us_background {
     position: absolute;
     z-index: 0;
     height: 100vh;
     width: 100vw;
     filter: blur(5px);
 }
+
+#menu_background {
+    position: absolute;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    filter: blur(5px);
+}
+
+
+
