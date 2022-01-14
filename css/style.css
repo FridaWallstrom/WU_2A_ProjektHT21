@@ -92,7 +92,7 @@ nav {
 #menu_header {
     grid-area: he;
     font-size: 4rem;
-    color: rgb(63, 63, 63);
+    color: rgb(58, 58, 58);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
